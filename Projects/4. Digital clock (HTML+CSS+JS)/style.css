@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+.clock-container {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0;
+  filter: drop-shadow(0 0 25px rgb(65, 195, 255));
+}
+
+.name {
+  font-size: 50px;
+  font-weight: 600;
+  text-decoration: underline;
+  height: inherit;
+}
+
+.time {
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+}
+
+.ampm {
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+.divider1 {
+  font-size: 170px;
+  font-weight: 500;
+}
+
+.divider2 {
+  font-size: 100px;
+  font-weight: 900;
+}
+
+.hourbox,
+.minutebox,
+.secbox {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 25px;
+}
+
+.hourbox,
+.minutebox {
+  font-size: 200px;
+  font-weight: 900;
+  letter-spacing: 7px;
+}
+
+.secbox {
+  font-size: 100px;
+  font-weight: 900;
+}
+
+.date-container {
+  width: 100%;
+  font-size: 25px;
+  padding: 0 50px;
+}
+
+.date-day-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 87.5%;
+}
+
+.month,
+.year {
+  font-weight: 900;
+}
+
+.day-viewer {
+  display: flex;
+  font-size: 50px;
+}
+.day2 {
+  font-weight: 900;
+}
+
+.ampm,
+.day1,
+.date-container {
+  filter: drop-shadow(0 0 30px rgb(65, 195, 255));
+}
