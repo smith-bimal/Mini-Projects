@@ -1,0 +1,90 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+/* utility section */
+* {
+  box-sizing: border-box;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 1000px;
+}
+.link-text {
+  opacity: 80%;
+  color: white;
+  cursor: pointer;
+}
+
+.link-text:hover {
+  opacity: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* navbar section */
+
+.navbar {
+  background-color: #1d1d1f;
+  justify-content: center;
+}
+
+.nav-main-container {
+  height: 45px;
+  justify-content: space-between;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar input {
+  display: none;
+}
+
+/* sub-navbar section */
+.sub-store-container {
+  color: white;
+  width: 100vw;
+  background-color: #1d1d1f;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+  position: absolute;
+  top: -100%;
+  display: none;
+}
+
+#store:checked + .sub-store-container {
+  position: absolute;
+  top: 45px;
+}
+
+.sub-store-heading {
+  color: #86868b;
+}
+
+.sub-store-container ul li {
+  margin: 15px 0;
+}
+
+.sub-store-main {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.sub-store {
+  align-items: flex-start;
+  gap: 50px;
+}
