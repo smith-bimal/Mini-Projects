@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Apple (India)</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Assets/Favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -14,58 +15,650 @@
     />
   </head>
   <body>
-    <nav class="navbar flex">
-      <div class="nav-main-container flex container">
-        <a href="#"
-          ><div class="link-text">
-            <i class="fa-brands fa-apple" style="font-size: 18px"></i></div
-        ></a>
-        <input type="checkbox" id="store" />
-        <label for="store" class="link-text">Store</label>
-        <a href="#"><div class="link-text">Mac</div></a>
-        <a href="#"><div class="link-text">iPad</div></a>
-        <a href="#"><div class="link-text">iPhone</div></a>
-        <a href="#"><div class="link-text">Watch</div></a>
-        <a href="#"><div class="link-text">AirPods</div></a>
-        <a href="#"><div class="link-text">TV & Home</div></a>
-        <a href="#"><div class="link-text">Entertainment</div></a>
-        <a href="#"><div class="link-text">Accessories</div></a>
-        <a href="#"><div class="link-text">Support</div></a>
-        <a href="#"
-          ><div class="link-text" style="font-size: 14px">
-            <i class="fa-solid fa-magnifying-glass"></i></div
-        ></a>
-        <a href="#"
-          ><div class="link-text" style="font-size: 14px">
-            <i class="fa-solid fa-bag-shopping"></i></div
-        ></a>
+    <section>
+      <nav class="navbar flex">
+        <div class="nav-main-container flex container">
+          <a href="#"
+            ><div class="link-text">
+              <i class="fa-brands fa-apple" style="font-size: 18px"></i></div
+          ></a>
+          <a href="#"><div class="link-text" id="store-btn">Store</div></a>
+          <a href="#"><div class="link-text" id="mac-btn">Mac</div></a>
+          <a href="#"><div class="link-text" id="ipad-btn">iPad</div></a>
+          <a href="#"><div class="link-text" id="iphone-btn">iPhone</div></a>
+          <a href="#"><div class="link-text" id="watch-btn">Watch</div></a>
+          <a href="#"><div class="link-text" id="airpods-btn">AirPods</div></a>
+          <a href="#"><div class="link-text" id="tvHome-btn">TV & Home</div></a>
+          <a href="#"
+            ><div class="link-text" id="entertainment-btn">
+              Entertainment
+            </div></a
+          >
+          <a href="#"
+            ><div class="link-text" id="accessories-btn">Accessories</div></a
+          >
+          <a href="#"><div class="link-text" id="support-btn">Support</div></a>
+          <a href="#"
+            ><div class="link-text" style="font-size: 14px" id="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i></div
+          ></a>
+          <a href="#"
+            ><div class="link-text" style="font-size: 14px" id="bag-btn">
+              <i class="fa-solid fa-bag-shopping"></i></div
+          ></a>
+        </div>
+      </nav>
+      <div class="sub-nav-container flex" id="store-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Shop</li>
+            <li class="sub-store-main link-text">Shop the Latest</li>
+            <li class="sub-store-main link-text">Mac</li>
+            <li class="sub-store-main link-text">iPad</li>
+            <li class="sub-store-main link-text">iPhone</li>
+            <li class="sub-store-main link-text">Apple Watch</li>
+            <li class="sub-store-main link-text">Accessories</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Quick Links</li>
+            <li class="link-text">Find a Store</li>
+            <li class="link-text">Order Status</li>
+            <li class="link-text">Ways to Buy</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Shop Special Stores</li>
+            <li class="link-text">Education</li>
+            <li class="link-text">Business</li>
+          </ul>
+        </div>
       </div>
-    </nav>
-    <div class="sub-store-container flex" id="dropdown-products">
-      <div class="container sub-store flex">
-        <ul>
-          <li class="sub-store-heading">Shop</li>
-          <li class="sub-store-main link-text">Shop the Latest</li>
-          <li class="sub-store-main link-text">Mac</li>
-          <li class="sub-store-main link-text">iPad</li>
-          <li class="sub-store-main link-text">iPhone</li>
-          <li class="sub-store-main link-text">Apple Watch</li>
-          <li class="sub-store-main link-text">Accessories</li>
-        </ul>
+      <div class="sub-nav-container flex" id="mac-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore Mac</li>
+            <li class="sub-store-main link-text">Explore All Mac</li>
+            <li class="sub-store-main link-text">MacBook Air</li>
+            <li class="sub-store-main link-text">MacBook Pro</li>
+            <li class="sub-store-main link-text">iMac</li>
+            <li class="sub-store-main link-text">Mac mini</li>
+            <li class="sub-store-main link-text">Mac Studio</li>
+            <li class="sub-store-main link-text">Mac Pro</li>
+            <li class="sub-store-main link-text">Displays</li>
+            <br />
+            <li class="link-text">Compare Mac</li>
+            <li class="link-text">Mac Does That</li>
+          </ul>
 
-        <ul>
-          <li class="sub-store-heading">Quick Links</li>
-          <li class="link-text">Find a Store</li>
-          <li class="link-text">Order Status</li>
-          <li class="link-text">Ways to Buy</li>
-        </ul>
+          <ul>
+            <li class="sub-store-heading">Shop Mac</li>
+            <li class="link-text">Shop Mac</li>
+            <li class="link-text">Mac Accessories</li>
+            <li class="link-text">Ways to Buy</li>
+          </ul>
 
-        <ul>
-          <li class="sub-store-heading">Shop Special Stores</li>
-          <li class="link-text">Education</li>
-          <li class="link-text">Business</li>
-        </ul>
+          <ul>
+            <li class="sub-store-heading">More from Mac</li>
+            <li class="link-text">Mac Support</li>
+            <li class="link-text">AppleCare+ for Mac</li>
+            <li class="link-text">macOS Sonoma</li>
+            <li class="link-text">Apps by Apple</li>
+            <li class="link-text">Continuity</li>
+            <li class="link-text">iCloud+</li>
+            <li class="link-text">Apps for Business</li>
+            <li class="link-text">Education</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="ipad-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore iPad</li>
+            <li class="sub-store-main link-text">Explore All iPad</li>
+            <li class="sub-store-main link-text">MacBook Pro</li>
+            <li class="sub-store-main link-text">MacBook Air</li>
+            <li class="sub-store-main link-text">iPad</li>
+            <li class="sub-store-main link-text">iPad mini</li>
+            <li class="sub-store-main link-text">Apple Pencil</li>
+            <li class="sub-store-main link-text">Keyboards</li>
+            <br />
+            <li class="link-text">Compare iPad</li>
+            <li class="link-text">Why iPad</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Shop iPad</li>
+            <li class="link-text">Shop iPad</li>
+            <li class="link-text">iPad Accessories</li>
+            <li class="link-text">Ways to Buy</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">More from iPad</li>
+            <li class="link-text">iPad Support</li>
+            <li class="link-text">AppleCare+ for iPad</li>
+            <li class="link-text">iPadOS 17</li>
+            <li class="link-text">Apps by Apple</li>
+            <li class="link-text">iCloud+</li>
+            <li class="link-text">Education</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="iphone-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore iPhone</li>
+            <li class="sub-store-main link-text">Explore All iPhone</li>
+            <li class="sub-store-main link-text">iPhone 15 Pro</li>
+            <li class="sub-store-main link-text">iPhone 15</li>
+            <li class="sub-store-main link-text">iPhone 14</li>
+            <li class="sub-store-main link-text">iPhone 13</li>
+            <li class="sub-store-main link-text">iPhone SE</li>
+            <br />
+            <li class="link-text">Compare iPhone</li>
+            <li class="link-text">Switch from Android</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Shop iPhone</li>
+            <li class="link-text">Shop iPhone</li>
+            <li class="link-text">iPhone Accessories</li>
+            <li class="link-text">Apple Trade In</li>
+            <li class="link-text">Ways to Buy</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">More from iPhone</li>
+            <li class="link-text">iPhone Support</li>
+            <li class="link-text">AppleCare+ for iPhone</li>
+            <li class="link-text">iOS 17</li>
+            <li class="link-text">Apps by Apple</li>
+            <li class="link-text">iPhone Privacy</li>
+            <li class="link-text">iCloud+</li>
+            <li class="link-text">Wallet</li>
+            <li class="link-text">Siri</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="watch-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore Watch</li>
+            <li class="sub-store-main link-text">Explore All Apple Watch</li>
+            <li class="sub-store-main link-text">Apple Watch Series 9</li>
+            <li class="sub-store-main link-text">Apple Watch Ultra 2</li>
+            <li class="sub-store-main link-text">Apple Watch SE</li>
+            <li class="sub-store-main link-text">Apple Watch Nike</li>
+            <br />
+            <li class="link-text">Compare Watch</li>
+            <li class="link-text">Why Apple Watch</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Shop Watch</li>
+            <li class="link-text">Shop Apple Watch</li>
+            <li class="link-text">Apple Watch Straps</li>
+            <li class="link-text">Apple Watch Accessories</li>
+            <li class="link-text">Ways to Buy</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">More from Watch</li>
+            <li class="link-text">Apple Watch Support</li>
+            <li class="link-text">AppleCare+</li>
+            <li class="link-text">WatchOS 10</li>
+            <li class="link-text">Apps by Apple</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="airpods-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore AirPods</li>
+            <li class="sub-store-main link-text">Explore All AirPods</li>
+            <li class="sub-store-main link-text">AirPods Pro 2nd generation</li>
+            <li class="sub-store-main link-text">AirPods 2nd generation</li>
+            <li class="sub-store-main link-text">AirPods 3rd generation</li>
+            <li class="sub-store-main link-text">AirPods Max</li>
+            <br />
+            <li class="link-text">Compare AirPods</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Shop AirPods</li>
+            <li class="link-text">Shop AirPods</li>
+            <li class="link-text">AirPods Accessories</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">More from AirPods</li>
+            <li class="link-text">AirPods Support</li>
+            <li class="link-text">AppleCare+ for Headphones</li>
+            <li class="link-text">Apple Music</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="tvHome-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore TV & Home</li>
+            <li class="sub-store-main link-text">Explore TV & Home</li>
+            <li class="sub-store-main link-text">Apple TV 4K</li>
+            <li class="sub-store-main link-text">HomePod</li>
+            <li class="sub-store-main link-text">HomePod mini</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Shop TV & Home</li>
+            <li class="link-text">Shop Apple TV 4K</li>
+            <li class="link-text">Shop HomePod</li>
+            <li class="link-text">Shop HomePod mini</li>
+            <li class="link-text">Shop Siri Remote</li>
+            <li class="link-text">TV & Home Accessories</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">More from TV & Home</li>
+            <li class="link-text">Apple TV Support</li>
+            <li class="link-text">HomePod Support</li>
+            <li class="link-text">AppleCare+</li>
+            <li class="link-text">Apple TV app</li>
+            <li class="link-text">Apple TV+</li>
+            <li class="link-text">Home app</li>
+            <li class="link-text">Apple Music</li>
+            <li class="link-text">Siri</li>
+            <li class="link-text">AirPlay</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="entertainment-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore Entertainment</li>
+            <li class="sub-store-main link-text">Explore Entertainment</li>
+            <li class="sub-store-main link-text">Apple One</li>
+            <li class="sub-store-main link-text">Apple TV+</li>
+            <li class="sub-store-main link-text">Apple Music</li>
+            <li class="sub-store-main link-text">Apple Arcade</li>
+            <li class="sub-store-main link-text">Apple Podcasts</li>
+            <li class="sub-store-main link-text">Apple Books</li>
+            <li class="sub-store-main link-text">App Store</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Support</li>
+            <li class="link-text">Apple TV+ Support</li>
+            <li class="link-text">Apple Music Support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="accessories-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Shop Accessories</li>
+            <li class="sub-store-main link-text">Shop All Accessories</li>
+            <li class="sub-store-main link-text">Mac</li>
+            <li class="sub-store-main link-text">iPad</li>
+            <li class="sub-store-main link-text">iPhone</li>
+            <li class="sub-store-main link-text">Apple Watch</li>
+            <li class="sub-store-main link-text">AirPods</li>
+            <li class="sub-store-main link-text">TV & Home</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Explore Accessories</li>
+            <li class="link-text">Made by Apple</li>
+            <li class="link-text">AirTag</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="support-dropdown-products">
+        <div class="container sub-nav-menu flex">
+          <ul>
+            <li class="sub-store-heading">Explore Support</li>
+            <li class="sub-store-main link-text">iPhone</li>
+            <li class="sub-store-main link-text">Mac</li>
+            <li class="sub-store-main link-text">iPad</li>
+            <li class="sub-store-main link-text">Watch</li>
+            <li class="sub-store-main link-text">AirPods</li>
+            <li class="sub-store-main link-text">Music</li>
+            <li class="sub-store-main link-text">TV</li>
+            <br />
+            <li class="link-text">Explore Support</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Get Help</li>
+            <li class="link-text">Community</li>
+            <li class="link-text">Check Coverage</li>
+            <li class="link-text">Repair</li>
+            <li class="link-text">Contact Us</li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Helpful Topics</li>
+            <li class="link-text">Get AppleCare+</li>
+            <li class="link-text">Apple ID & Password</li>
+            <li class="link-text">Billing & subscriptions</li>
+            <li class="link-text">FInd My</li>
+            <li class="link-text">Accessibility</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="search-dropdown-products">
+        <div class="container sub-nav-menu">
+          <ul>
+            <li class="sub-search-main flex">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                placeholder="Search apple.com"
+                class="sub-nav-searchbox sub-store-main"
+                aria-selected="true"
+              />
+            </li>
+          </ul>
+
+          <ul>
+            <li class="sub-store-heading">Quick Links</li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-arrow-right"></i></a
+              ><span> Find a Store</span>
+            </li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-arrow-right"></i></a
+              ><span> Accessories</span>
+            </li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-arrow-right"></i></a
+              ><span> AirPods</span>
+            </li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-arrow-right"></i></a
+              ><span> AirTag</span>
+            </li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-arrow-right"></i></a
+              ><span> Apple Trade In</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sub-nav-container flex" id="bag-dropdown-products">
+        <div class="container sub-nav-menu">
+          <ul>
+            <li
+              class="sub-store-main"
+              style="margin-bottom: 20px; color: white"
+            >
+              Your Bag is empty.
+            </li>
+            <li class="link-text-white bold">
+              <a href="#">Sign in</a
+              ><span class="sub-store-heading">
+                to see if you have any saved items</span
+              >
+            </li>
+          </ul>
+
+          <ul style="margin-top: 30px">
+            <li class="sub-store-heading">My Profile</li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-box"></i><span> Orders</span></a
+              >
+            </li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-bookmark"></i><span> Your Saves</span></a
+              >
+            </li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-user-gear"></i><span> Account</span></a
+              >
+            </li>
+            <li class="search-link-text">
+              <a href="#" class="link-text"
+                ><i class="fa-solid fa-circle-user"></i><span> Sign in</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="banner">
+        <p>
+          Save up to ₹8000.00 instantly on eligible products with HDFC Bank
+          Credit Cards.* Plus No Cost EMI from most leading banks.
+          <span class="link-text-white"><a href="#">Shop now</a> ></span>
+        </p>
+      </div>
+
+      <div class="iphone-15-pro hero-image">
+        <div class="hero-text">
+          <h1>iPhone 15 Pro</h1>
+          <h3>Titanium. So strong. So light. So Pro.</h3>
+          <p class="link-text-black"><a href="#">Learn More</a> ></p>
+          <p class="link-text-black"><a href="#">Buy</a> ></p>
+        </div>
+      </div>
+
+      <div class="iphone-15 hero-image">
+        <div class="hero-text">
+          <h1>iPhone 15</h1>
+          <h3>New Camera. New Design. Newphoria.</h3>
+          <p class="link-text-white"><a href="#">Learn More</a> ></p>
+          <p class="link-text-white"><a href="#">Buy</a> ></p>
+        </div>
+      </div>
+
+      <div class="apple-watch hero-image">
+        <div class="hero-text hero-text-2">
+          <h1>
+            <i class="fa-brands fa-apple" style="vertical-align: top"></i> WATCH
+          </h1>
+          <h5 style="font-weight: 100; margin: 10px 0; letter-spacing: 4px">
+            SERIES 9
+          </h5>
+          <h3>Double tap. A magical new way to use Apple Watch.</h3>
+          <p class="primary-button"><a href="#">Learn More</a></p>
+          <p class="primary-button"><a href="#">Buy</a></p>
+        </div>
+      </div>
+
+      <div class="grid secondary-hero-container">
+        <div class="sub-image box1">
+          <div class="sub-hero-text">
+            <h1>
+              <i class="fa-brands fa-apple" style="vertical-align: top"></i>
+              WATCH
+            </h1>
+            <h3
+              style="
+                color: #fd6a13;
+                letter-spacing: 0.5px;
+                font-weight: 600;
+                font-size: 0.95rem;
+              "
+            >
+              ULTRA 2
+            </h3>
+            <h3>Next-level adventure.</h3>
+            <p class="link-text-white"><a href="#">Learn More</a> ></p>
+            <p class="link-text-white"><a href="#">Buy</a> ></p>
+          </div>
+        </div>
+        <div class="sub-image box2">
+          <div class="sub-hero-text">
+            <h1>MacBook Pro</h1>
+            <h3>Mind-blowing. Head-turning.</h3>
+            <p class="link-text-white"><a href="#">Learn More</a> ></p>
+            <p class="link-text-white"><a href="#">Buy</a> ></p>
+          </div>
+        </div>
+        <div class="sub-image box3">
+          <div class="sub-hero-text">
+            <h1>iPad</h1>
+            <h3>Lovable. Drawable. Magical.</h3>
+            <p class="link-text-white"><a href="#">Learn More</a> ></p>
+            <p class="link-text-white"><a href="#">Buy</a> ></p>
+          </div>
+        </div>
+        <div class="sub-image box4">
+          <div class="sub-hero-text">
+            <h1>AirPods Pro</h1>
+            <h3>Adaptive Audio. Now playing.</h3>
+            <p class="link-text-black"><a href="#">Learn More</a> ></p>
+            <p class="link-text-black"><a href="#">Buy</a> ></p>
+          </div>
+        </div>
+        <div class="sub-image box5">
+          <div class="sub-hero-text">
+            <h1>HomePod mini</h1>
+            <br />
+            <p class="link-text-white"><a href="#">Learn More</a> ></p>
+            <p class="link-text-white"><a href="#">Buy</a> ></p>
+          </div>
+        </div>
+        <div class="sub-image box6">
+          <div class="sub-hero-text">
+            <h1>
+              <i class="fa-brands fa-apple" style="vertical-align: top"></i
+              >Trade In
+            </h1>
+            <h3>Upgrade and save. It's that easy.</h3>
+            <p class="link-text-white"><a href="#">Learn More</a> ></p>
+            <p class="link-text-white"><a href="#">Buy</a> ></p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- footer section  -->
+    <footer class="flex">
+      <div class="container description">
+        <li>
+          *Instant savings, otherwise referred to as instant cashback, is
+          available with the purchase of an eligible product for qualifying HDFC
+          Bank Credit Cards and EasyEMI Credit Cards only. Minimum transaction
+          value of ₹10001.00 applies. <a href="#">Click here</a> to see instant
+          savings amounts and eligible devices. Instant savings is available for
+          up to two orders per rolling 90-day period with an eligible card. Card
+          eligibility is subject to terms and conditions between you and your
+          card-issuing bank. Total transaction value is calculated after any
+          trade-in credit or eligible discount applied. Any subsequent order
+          adjustment(s) or cancellation(s) may result in instant savings being
+          recalculated, and any refund may be adjusted to account for instant
+          savings clawback; this may result in no refund being made to you.
+          Offer may be revised or withdrawn at any time without any prior
+          notice. <a href="#">Additional terms apply</a>. Offer cannot be
+          combined with Apple Store for Education or Corporate Employee Purchase
+          Plan pricing. Multiple separate orders cannot be combined for instant
+          savings.
+        </li>
+
+        <li>
+          ‡No Cost EMI is available with the purchase of an
+          <a href="#">eligible product</a>
+          made using eligible cards on 3- or 6-month tenures from most leading
+          banks. Monthly pricing is rounded to the nearest rupee. Exact pricing
+          will be provided by your bank, subject to your bank’s terms and
+          conditions. Minimum order spend applies as per your card-issuing bank
+          threshold. Offer cannot be combined with Apple Store for Education or
+          Corporate Employee Purchase Plan pricing. Card eligibility is subject
+          to terms and conditions between you and your card-issuing bank. Offer
+          may be revised or withdrawn at any time without any prior notice.
+          <a href="#">Additional terms apply</a>.
+        </li>
+        <li>
+          Representative example: Based on a 6-month tenure. ₹79900.00 total
+          cost includes 15% p.a. and No Cost EMI savings of ₹3380.00, paid over
+          6 months as six monthly payments of ₹13317.00.
+        </li>
+        <li>A subscription is required for Apple TV+.</li>
+      </div>
+    </footer>
+
+    <script>
+      const storeDropDown = document.getElementById("store-dropdown-products");
+      const storeBtn = document.getElementById("store-btn");
+      const macDropDown = document.getElementById("mac-dropdown-products");
+      const macBtn = document.getElementById("mac-btn");
+      const iPadDropDown = document.getElementById("ipad-dropdown-products");
+      const iPadBtn = document.getElementById("ipad-btn");
+      const iPhoneDropDown = document.getElementById(
+        "iphone-dropdown-products"
+      );
+      const iPhoneBtn = document.getElementById("iphone-btn");
+      const watchDropDown = document.getElementById("watch-dropdown-products");
+      const watchBtn = document.getElementById("watch-btn");
+      const airPodsDropDown = document.getElementById(
+        "airpods-dropdown-products"
+      );
+      const airPodsBtn = document.getElementById("airpods-btn");
+      const tvHomeDropDown = document.getElementById(
+        "tvHome-dropdown-products"
+      );
+      const tvHomeBtn = document.getElementById("tvHome-btn");
+      const entertainmentDropDown = document.getElementById(
+        "entertainment-dropdown-products"
+      );
+      const entertainmentBtn = document.getElementById("entertainment-btn");
+      const accessoriesDropDown = document.getElementById(
+        "accessories-dropdown-products"
+      );
+      const accessoriesBtn = document.getElementById("accessories-btn");
+      const supportDropDown = document.getElementById(
+        "support-dropdown-products"
+      );
+      const supportBtn = document.getElementById("support-btn");
+      const searchDropDown = document.getElementById(
+        "search-dropdown-products"
+      );
+      const searchBtn = document.getElementById("search-btn");
+      const bagDropDown = document.getElementById("bag-dropdown-products");
+      const bagBtn = document.getElementById("bag-btn");
+
+      const dropDownEvent = (button, dropdown) => {
+        button.addEventListener("click", () => {
+          dropdown.classList.toggle("active");
+
+          const blurOverlay = document.getElementById("blurOverlayId");
+          if (dropdown.classList.contains("active")) {
+            if (!blurOverlay) {
+              const newBlurOverlay = document.createElement("div");
+              newBlurOverlay.id = "blurOverlayId";
+              newBlurOverlay.className = "blur-overlay";
+              document.body.appendChild(newBlurOverlay);
+            }
+          } else {
+            if (blurOverlay) {
+              blurOverlay.remove();
+            }
+          }
+        });
+      };
+      dropDownEvent(storeBtn, storeDropDown);
+      dropDownEvent(macBtn, macDropDown);
+      dropDownEvent(iPadBtn, iPadDropDown);
+      dropDownEvent(iPhoneBtn, iPhoneDropDown);
+      dropDownEvent(watchBtn, watchDropDown);
+      dropDownEvent(airPodsBtn, airPodsDropDown);
+      dropDownEvent(tvHomeBtn, tvHomeDropDown);
+      dropDownEvent(entertainmentBtn, entertainmentDropDown);
+      dropDownEvent(accessoriesBtn, accessoriesDropDown);
+      dropDownEvent(supportBtn, supportDropDown);
+      dropDownEvent(searchBtn, searchDropDown);
+      dropDownEvent(bagBtn, bagDropDown);
+    </script>
   </body>
 </html>
