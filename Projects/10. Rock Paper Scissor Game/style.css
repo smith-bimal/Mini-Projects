@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Covered By Your Grace", cursive;
+}
+body {
+  background-image: url("images/blurry-gradient-haikei.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.choice-container {
+  gap: 3rem;
+  margin-block: 3rem;
+}
+
+.choice {
+  height: 150px;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.123);
+  border-radius: 50%;
+}
+
+.choice:hover {
+  background-color: rgba(0, 0, 0, 0.226);
+  cursor: pointer;
+}
+
+.choice img {
+  height: 80px;
+}
+
+h1 {
+  background: rgba(234, 144, 0, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(18.9px);
+  border: 1px solid rgba(234, 144, 0, 0.28);
+  line-height: 7.5rem;
+  font-size: 3rem;
+}
+
+.score-container {
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+#userScore,
+#compScore {
+  font-size: 5rem;
+}
+
+.msg-container {
+  margin: 2rem;
+}
+
+.reset {
+  margin: 4rem;
+}
+
+#msg {
+  display: inline;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+#reset-btn {
+  background-color: rgba(151, 108, 14, 0.336);
+  display: inline;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+#reset-btn:hover {
+  background-color: rgba(0, 0, 0, 0.226);
+  cursor: pointer;
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .choice img {
+    height: 70px;
+  }
+
+  .choice-container {
+    gap: 1rem;
+    margin-block: 2rem;
+  }
+
+  .msg-container {
+    margin: 1rem;
+  }
+
+  .reset {
+    margin: 3rem;
+  }
+
+  .choice {
+    height: 120px;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.123);
+    border-radius: 50%;
+  }
+}
