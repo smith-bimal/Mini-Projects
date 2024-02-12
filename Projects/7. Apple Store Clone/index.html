@@ -18,36 +18,85 @@
     <section>
       <nav class="navbar flex">
         <div class="nav-main-container flex container">
-          <a href="#"
-            ><div class="link-text">
-              <i class="fa-brands fa-apple" style="font-size: 18px"></i></div
-          ></a>
-          <a href="#"><div class="link-text" id="store-btn">Store</div></a>
-          <a href="#"><div class="link-text" id="mac-btn">Mac</div></a>
-          <a href="#"><div class="link-text" id="ipad-btn">iPad</div></a>
-          <a href="#"><div class="link-text" id="iphone-btn">iPhone</div></a>
-          <a href="#"><div class="link-text" id="watch-btn">Watch</div></a>
-          <a href="#"><div class="link-text" id="airpods-btn">AirPods</div></a>
-          <a href="#"><div class="link-text" id="tvHome-btn">TV & Home</div></a>
-          <a href="#"
-            ><div class="link-text" id="entertainment-btn">
-              Entertainment
-            </div></a
+          <div class="link-text main-nav-link flex">
+            <a href="#">
+              <i class="fa-brands fa-apple" style="font-size: 18px"></i>
+            </a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="store-btn"
           >
-          <a href="#"
-            ><div class="link-text" id="accessories-btn">Accessories</div></a
+            <a href="#">Store</a>
+          </div>
+          <div class="link-text main-nav-link hover-sub-menu flex" id="mac-btn">
+            <a href="#">Mac</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="ipad-btn"
           >
-          <a href="#"><div class="link-text" id="support-btn">Support</div></a>
-          <a href="#"
-            ><div class="link-text" style="font-size: 14px" id="search-btn">
-              <i class="fa-solid fa-magnifying-glass"></i></div
-          ></a>
-          <a href="#"
-            ><div class="link-text" style="font-size: 14px" id="bag-btn">
-              <i class="fa-solid fa-bag-shopping"></i></div
-          ></a>
+            <a href="#">iPad</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="iphone-btn"
+          >
+            <a href="#">iPhone</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="watch-btn"
+          >
+            <a href="#">Watch</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="airpods-btn"
+          >
+            <a href="#">AirPods</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="tvHome-btn"
+          >
+            <a href="#">TV & Home</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="entertainment-btn"
+          >
+            <a href="#">Entertainment</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="accessories-btn"
+          >
+            <a href="#">Accessories</a>
+          </div>
+          <div
+            class="link-text main-nav-link hover-sub-menu flex"
+            id="support-btn"
+          >
+            <a href="#">Support</a>
+          </div>
+          <div
+            class="link-text main-nav-link click-sub-menu flex"
+            style="font-size: 14px"
+            id="search-btn"
+          >
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </div>
+          <div
+            class="link-text main-nav-link click-sub-menu flex"
+            style="font-size: 14px"
+            id="bag-btn"
+          >
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
         </div>
       </nav>
+
       <div class="sub-nav-container flex" id="store-dropdown-products">
         <div class="container sub-nav-menu flex">
           <ul>
@@ -434,6 +483,8 @@
       </div>
     </section>
 
+    <div class="blur-overlay"></div>
+
     <div class="grid">
       <div class="banner">
         <p>
@@ -586,79 +637,122 @@
         </li>
         <li>A subscription is required for Apple TV+.</li>
       </div>
+
+      <div class="footer-navigation container flex">
+        <div>
+          <ul>
+            <li class="footer-nav-link-heading">Shop and Learn</li>
+            <li class="footer-nav-link-text">Store</li>
+            <li class="footer-nav-link-text">Mac</li>
+            <li class="footer-nav-link-text">iPad</li>
+            <li class="footer-nav-link-text">iPhone</li>
+            <li class="footer-nav-link-text">Watch</li>
+            <li class="footer-nav-link-text">AirPods</li>
+            <li class="footer-nav-link-text">TV & Home</li>
+            <li class="footer-nav-link-text">AirTag</li>
+            <li class="footer-nav-link-text">Accessories</li>
+            <li class="footer-nav-link-text">Gift Cards</li>
+          </ul>
+          <ul>
+            <li class="footer-nav-link-heading">Apple Wallet</li>
+            <li class="footer-nav-link-text">Wallet</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="footer-nav-link-heading">Account</li>
+            <li class="footer-nav-link-text">Manage Your Apple ID</li>
+            <li class="footer-nav-link-text">Apple Store Account</li>
+            <li class="footer-nav-link-text">iCloud.com</li>
+          </ul>
+          <ul>
+            <li class="footer-nav-link-heading">Entertainment</li>
+            <li class="footer-nav-link-text">Apple One</li>
+            <li class="footer-nav-link-text">Apple TV+</li>
+            <li class="footer-nav-link-text">Apple Music</li>
+            <li class="footer-nav-link-text">Apple Arcade</li>
+            <li class="footer-nav-link-text">Apple Podcasts</li>
+            <li class="footer-nav-link-text">Apple Books</li>
+            <li class="footer-nav-link-text">Apple Store</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="footer-nav-link-heading">Apple Store</li>
+            <li class="footer-nav-link-text">Find a Store</li>
+            <li class="footer-nav-link-text">Genius Bar</li>
+            <li class="footer-nav-link-text">Today at Apple</li>
+            <li class="footer-nav-link-text">Apple Camp</li>
+            <li class="footer-nav-link-text">Apple Trade In</li>
+            <li class="footer-nav-link-text">Ways to Buy</li>
+            <li class="footer-nav-link-text">Recycling Programme</li>
+            <li class="footer-nav-link-text">Order Status</li>
+            <li class="footer-nav-link-text">Shopping Help</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="footer-nav-link-heading">For Business</li>
+            <li class="footer-nav-link-text">Apple and Business</li>
+            <li class="footer-nav-link-text">Shop for Business</li>
+          </ul>
+          <ul>
+            <li class="footer-nav-link-heading">For Education</li>
+            <li class="footer-nav-link-text">Apple and Education</li>
+            <li class="footer-nav-link-text">Shope for Education</li>
+            <li class="footer-nav-link-text">Shope for University</li>
+          </ul>
+          <ul>
+            <li class="footer-nav-link-heading">For Healthcare</li>
+            <li class="footer-nav-link-text">Apple in Healthcare</li>
+            <li class="footer-nav-link-text">Health on Apple Watch</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="footer-nav-link-heading">Apple Values</li>
+            <li class="footer-nav-link-text">Accessibility</li>
+            <li class="footer-nav-link-text">Education</li>
+            <li class="footer-nav-link-text">Environment</li>
+            <li class="footer-nav-link-text">Privacy</li>
+            <li class="footer-nav-link-text">Supplier Responsibility</li>
+          </ul>
+          <ul>
+            <li class="footer-nav-link-heading">About Apple</li>
+            <li class="footer-nav-link-text">Newsroom</li>
+            <li class="footer-nav-link-text">Apple Leadership</li>
+            <li class="footer-nav-link-text">Career Opportunities</li>
+            <li class="footer-nav-link-text">Investors</li>
+            <li class="footer-nav-link-text">Ethics & Compliance</li>
+            <li class="footer-nav-link-text">Events</li>
+            <li class="footer-nav-link-text">Contact Apple</li>
+          </ul>
+        </div>
+      </div>
+      <p class="nav-contact-line container">
+        More ways to shop: <a href="#">Find an Apple Store</a> or
+        <a href="#">other retailer</a> near you. Or call 000800 040 1966.
+      </p>
+
+      <div class="copyright container flex">
+        <p>Copyright © 2024 Apple Inc. All rights reserved.</p>
+        <p>India</p>
+      </div>
+      <div class="privacy-policy container flex">
+        <ul class="flex">
+          <li class="footer-nav-link-text">Privacy Policy</li>
+          <span class="privacy-policy-bar">|</span>
+          <li class="footer-nav-link-text">Terms of Use</li>
+          <span class="privacy-policy-bar">|</span>
+          <li class="footer-nav-link-text">Sales Policy</li>
+          <span class="privacy-policy-bar">|</span>
+          <li class="footer-nav-link-text">Legal</li>
+          <span class="privacy-policy-bar">|</span>
+          <li class="footer-nav-link-text">Site Map</li>
+        </ul>
+      </div>
     </footer>
 
-    <script>
-      const storeDropDown = document.getElementById("store-dropdown-products");
-      const storeBtn = document.getElementById("store-btn");
-      const macDropDown = document.getElementById("mac-dropdown-products");
-      const macBtn = document.getElementById("mac-btn");
-      const iPadDropDown = document.getElementById("ipad-dropdown-products");
-      const iPadBtn = document.getElementById("ipad-btn");
-      const iPhoneDropDown = document.getElementById(
-        "iphone-dropdown-products"
-      );
-      const iPhoneBtn = document.getElementById("iphone-btn");
-      const watchDropDown = document.getElementById("watch-dropdown-products");
-      const watchBtn = document.getElementById("watch-btn");
-      const airPodsDropDown = document.getElementById(
-        "airpods-dropdown-products"
-      );
-      const airPodsBtn = document.getElementById("airpods-btn");
-      const tvHomeDropDown = document.getElementById(
-        "tvHome-dropdown-products"
-      );
-      const tvHomeBtn = document.getElementById("tvHome-btn");
-      const entertainmentDropDown = document.getElementById(
-        "entertainment-dropdown-products"
-      );
-      const entertainmentBtn = document.getElementById("entertainment-btn");
-      const accessoriesDropDown = document.getElementById(
-        "accessories-dropdown-products"
-      );
-      const accessoriesBtn = document.getElementById("accessories-btn");
-      const supportDropDown = document.getElementById(
-        "support-dropdown-products"
-      );
-      const supportBtn = document.getElementById("support-btn");
-      const searchDropDown = document.getElementById(
-        "search-dropdown-products"
-      );
-      const searchBtn = document.getElementById("search-btn");
-      const bagDropDown = document.getElementById("bag-dropdown-products");
-      const bagBtn = document.getElementById("bag-btn");
-
-      const dropDownEvent = (button, dropdown) => {
-        button.addEventListener("click", () => {
-          dropdown.classList.toggle("active");
-
-          const blurOverlay = document.getElementById("blurOverlayId");
-          if (dropdown.classList.contains("active")) {
-            if (!blurOverlay) {
-              const newBlurOverlay = document.createElement("div");
-              newBlurOverlay.id = "blurOverlayId";
-              newBlurOverlay.className = "blur-overlay";
-              document.body.appendChild(newBlurOverlay);
-            }
-          } else {
-            if (blurOverlay) {
-              blurOverlay.remove();
-            }
-          }
-        });
-      };
-      dropDownEvent(storeBtn, storeDropDown);
-      dropDownEvent(macBtn, macDropDown);
-      dropDownEvent(iPadBtn, iPadDropDown);
-      dropDownEvent(iPhoneBtn, iPhoneDropDown);
-      dropDownEvent(watchBtn, watchDropDown);
-      dropDownEvent(airPodsBtn, airPodsDropDown);
-      dropDownEvent(tvHomeBtn, tvHomeDropDown);
-      dropDownEvent(entertainmentBtn, entertainmentDropDown);
-      dropDownEvent(accessoriesBtn, accessoriesDropDown);
-      dropDownEvent(supportBtn, supportDropDown);
-      dropDownEvent(searchBtn, searchDropDown);
-      dropDownEvent(bagBtn, bagDropDown);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
