@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <body class="flex">
+    <div class="card">
+      <video
+        src="BG-videos/Default.mp4"
+        class="bg-video"
+        autoplay
+        loop
+        muted
+      ></video>
+    </div>
+
+    <div class="main">
+      <div class="top-sec flex">
+        <div class="header flex">
+          <p class="heading">Weather.app</p>
+          <p class="date">
+            <span id="main-day">--</span> /
+            <span id="main-month">--</span>
+          </p>
+        </div>
+
+        <div class="search flex">
+            <input type="text" placeholder="Enter city name" />
+          <button id="search-btn"><img src="Images/search.png" /></button>
+        </div>
+      </div>
+
+      <div class="hero-container flex">
+        <div class="hero-sec content">
+          <img src="Images/Mist.png" />
+          <span id="weather-type">--</span>
+          <h1 class="temp"><span id="temp">__</span>°c</h1>
+          <h2 id="city">--</h2>
+
+          <div class="hero-description">
+            <p>
+              Description :
+              <span id="weather-description"></span>
+            </p>
+            <p>Max-Temp : <span id="max-temp"></span></p>
+            <p>Min-Temp : <span id="min-temp"></span></p>
+          </div>
+        </div>
+
+        <div class="right-sec">
+          <div class="highlights-tab content">
+            <p class="heading">Today's highlights</p>
+            <hr />
+            <div class="highlights flex">
+              <div class="sub-highlight">
+                <p class="sub-highlight-name">Humidity</p>
+                <img src="Images/humidity.png" />
+                <p class="sub-highlight-value">
+                  <span id="humidity">__</span>%
+                </p>
+              </div>
+
+              <div class="sub-highlight">
+                <p class="sub-highlight-name">Wind Speed</p>
+                <img src="Images/wind.png" />
+                <p class="sub-highlight-value">
+                  <span id="wind-speed">__</span> km/h
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlights-tab content">
+            <p class="heading">Hourly Forecasts</p>
+            <hr />
+            <div class="forecast-cotainer flex" id="hour-fc">
+              <div class="mini-tab mini-content">
+                <p class="mini-head mini-hour">--</p>
+                <p class="mini-temp mini-hour-temp">--</p>
+                <img src="Images/rain.png" />
+              </div>
+
+              <div class="mini-tab mini-content">
+                <p class="mini-head mini-hour">--</p>
+                <p class="mini-temp mini-hour-temp">--</p>
+                <img src="Images/rain.png" />
+              </div>
+
+              <div class="mini-tab mini-content">
+                <p class="mini-head mini-hour">--</p>
+                <p class="mini-temp mini-hour-temp">--</p>
+                <img src="Images/rain.png" />
+              </div>
+
+              <div class="mini-tab mini-content">
+                <p class="mini-head mini-hour">--</p>
+                <p class="mini-temp mini-hour-temp">--</p>
+                <img src="Images/rain.png" />
+              </div>
+
+              <div class="mini-tab mini-content">
+                <p class="mini-head mini-hour">--</p>
+                <p class="mini-temp mini-hour-temp">--</p>
+                <img src="Images/rain.png" />
+              </div>
+          </div>
+
+          <div class="highlights-tab content">
+            <p class="heading">5 Days Forecast</p>
+            <hr />
+            <div class="forecast-cotainer mini-content" id="day-fc">
+              <table>
+                <tr>
+                  <td class="mini-head">Today</td>
+                  <td class="mini-head mini5-weather">--</td>
+                  <td><img src="Images/rain.png" alt="" /></td>
+                  <td class="mini-temp">--</td>
+                </tr>
+
+                <tr>
+                  <td class="mini-head nextday">--</td>
+                  <td class="mini-head mini5-weather">--</td>
+                  <td><img src="Images/rain.png" alt="" /></td>
+                  <td class="mini-temp">--</td>
+                </tr>
+
+                <tr>
+                  <td class="mini-head nextday">--</td>
+                  <td class="mini-head mini5-weather">--</td>
+                  <td><img src="Images/rain.png" alt="" /></td>
+                  <td class="mini-temp">--</td>
+                </tr>
+
+                <tr>
+                  <td class="mini-head nextday">--</td>
+                  <td class="mini-head mini5-weather">--</td>
+                  <td><img src="Images/rain.png" alt="" /></td>
+                  <td class="mini-temp">--</td>
+                </tr>
+
+                <tr>
+                  <td class="mini-head nextday">--</td>
+                  <td class="mini-head mini5-weather">--</td>
+                  <td><img src="Images/rain.png" alt="" /></td>
+                  <td class="mini-temp">--</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="popup-msg">
+      <p>Error</p>
+      <hr />
+      <p>Enter a Valid city name.</p>
+      <button id="popup-close">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

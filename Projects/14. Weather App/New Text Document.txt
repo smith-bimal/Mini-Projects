@@ -1,0 +1,7 @@
+current weather api link:-
+
+https://api.openweathermap.org/data/2.5/weather?q=cuttack&appid=a0aeb998a358ffad5fbf4a8d7e00c9cb&units=metric
+
+5 day weather api link:-
+
+https://api.openweathermap.org/data/2.5/forecast?q=cuttack&appid=a0aeb998a358ffad5fbf4a8d7e00c9cb&units=metric
