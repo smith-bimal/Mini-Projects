@@ -138,9 +138,9 @@ searchBtn.addEventListener("click", () => {
         async function checkCurrentWeather() {
             let currentResponse = await fetch(currentApiUrl + `&appId=${currentApiKey}`);
             let currentData = await currentResponse.json();
-            let weatherName = currentData.weather[0].main;
+            let weather = currentData.weather[0].main;
 
-            mainWeatherName.innerHTML = weatherName;
+            mainWeatherName.innerHTML = weather;
             mainWeatherLogo.style.opacity = "1";
             mainTemp.innerHTML = Math.round(currentData.main.temp);
             mainCity.innerHTML = currentData.name;
@@ -150,19 +150,19 @@ searchBtn.addEventListener("click", () => {
             humidity.innerHTML = currentData.main.humidity;
             windSpeed.innerHTML = currentData.wind.speed;
 
-            function weatherVisual(type) {
-                if (type == "") {
+            function weatherVisual(name) {
+                if (name == "") {
                     bgVideo.src = `BG-videos/Default.mp4`;
                     mainWeatherLogo.src = `Images/Clear.png`;
-                } else if (type == "Clouds" || type == "Clear" || type == "Drizzle" || type == "Rain" || type == "Snow" || type == "Thunderstorm") {
-                    bgVideo.src = `BG-videos/${type}.mp4`;
-                    mainWeatherLogo.src = `Images/${type}.png`;
+                } else if (name == "Clouds" || name == "Clear" || name == "Drizzle" || name == "Rain" || name == "Snow" || name == "Thunderstorm") {
+                    bgVideo.src = `BG-videos/${name}.mp4`;
+                    mainWeatherLogo.src = `Images/${name}.png`;
                 } else {
                     bgVideo.src = `BG-videos/Mist.mp4`;
                     mainWeatherLogo.src = `Images/Mist.png`;
                 }
             }
-            weatherVisual(weatherName);
+            weatherVisual(weather);
         }
         checkCurrentWeather();
 
