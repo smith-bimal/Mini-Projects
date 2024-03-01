@@ -7,7 +7,6 @@ const clock = () => {
     let seconds = date.getSeconds();
     let today = date.getDay();
     let dates = date.getDate();
-    let month = "";
     let year = date.getFullYear();
     let dayName = null;
 
@@ -51,54 +50,73 @@ const clock = () => {
 
     function actualDate() {
         document.getElementsByClassName("date")[0].innerHTML = dates + " ,";
+        let actualMonth = date.getMonth();
         document.getElementsByClassName("year")[0].innerHTML = year;
 
-        switch (date.getMonth()) {
+        switch (actualMonth) {
             case 0:
-                month = "JANUARY";
+                document.querySelector(".month").innerHTML = "JANUARY";
+                break;
             case 1:
-                month = "FEBRUARY";
+                document.querySelector(".month").innerHTML = "FEBRUARY";
+                break;
             case 2:
-                month = "MARCH";
+                document.querySelector(".month").innerHTML = "MARCH";
+                break;
             case 3:
-                month = "APRIL";
+                document.querySelector(".month").innerHTML = "APRIL";
+                break;
             case 4:
-                month = "MAY";
+                document.querySelector(".month").innerHTML = "MAY";
+                break;
+                break;
             case 5:
-                month = "JUNE";
+                document.querySelector(".month").innerHTML = "JUNE";
+                break;
             case 6:
-                month = "JULY";
+                document.querySelector(".month").innerHTML = "JULY";
+                break;
             case 7:
-                month = "AUGUST";
+                document.querySelector(".month").innerHTML = "AUGUST";
+                break;
             case 8:
-                month = "SEPTEMBER";
+                document.querySelector(".month").innerHTML = "SEPTEMBER";
+                break;
             case 9:
-                month = "OCTOBER";
+                document.querySelector(".month").innerHTML = "OCTOBER";
+                break;
             case 10:
-                month = "NOVEMBER";
+                document.querySelector(".month").innerHTML = "NOVEMBER";
+                break;
             case 11:
-                month = "DECEMBER";
+                document.querySelector(".month").innerHTML = "DECEMBER";
+                break;
         }
-
-        document.getElementsByClassName("month")[0].innerHTML = month;
     }
 
     function actualDay() {
         switch (today) {
             case 0:
                 dayName = "SUN";
+                break;
             case 1:
                 dayName = "MON";
+                break;
             case 2:
                 dayName = "TUES";
+                break;
             case 3:
                 dayName = "WEDNES";
+                break;
             case 4:
                 dayName = "THURS";
+                break;
             case 5:
                 dayName = "FRI";
+                break;
             case 6:
                 dayName = "SATUR";
+                break;
         }
 
         document.getElementsByClassName("day1")[0].innerHTML = dayName;
