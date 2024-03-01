@@ -74,57 +74,19 @@ const checkDate = () => {
 checkDate();
 
 let checkTableDay = () => {
-    const dayIdx = dateFn.getDay();
-    const nextDay = document.querySelectorAll(".nextday");
-
-    for (let i = 0; i < nextDay.length; i++) {
-
-        function dayCheck(el) {
-            switch (el) {
-                case 0:
-                    nextDay[i].innerHTML = "Sun";
-                    break;
-                case 1:
-                    nextDay[i].innerHTML = "Mon";
-                    break;
-                case 2:
-                    nextDay[i].innerHTML = "Tue";
-                    break;
-                case 3:
-                    nextDay[i].innerHTML = "Wed";
-                    break;
-                case 4:
-                    nextDay[i].innerHTML = "Thu";
-                    break;
-                case 5:
-                    nextDay[i].innerHTML = "Fri";
-                    break;
-                case 6:
-                    nextDay[i].innerHTML = "Sat";
-                    break;
-            }
-        }
-
-        let currentDay = parseInt(nextDay[i].innerHTML, 10);
-        if (currentDay > 6) {
-            dayCheck(currentDay % 7);
-        } else {
-            dayCheck((dayIdx + i + 1) % 7);
-        }
-    }
 }
 checkTableDay();
 
 searchBtn.addEventListener("click", () => {
 
     function errorPopup() {
-        document.querySelector("#popup-msg").style.transform = "scale(1)";
+        document.querySelector("#popup-msg").style.transform = "translate(-50%, -50%) scale(1)";
         document.querySelector(".hero-container").style.display = "none";
         searchCity.setAttribute("disabled", true);
 
         closeErrorBtn.addEventListener("click", () => {
             searchCity.removeAttribute("disabled");
-            document.querySelector("#popup-msg").style.transform = "scale(0)";
+            document.querySelector("#popup-msg").style.transform = "translate(-50%, -50%) scale(0)";
             document.querySelector(".hero-container").style.display = "flex";
         })
     }
@@ -222,24 +184,3 @@ searchBtn.addEventListener("click", () => {
     currentApiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=` + searchCity.value;
     forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=` + searchCity.value;
 })
-
-// async function checkForecastWeather() {
-//     let forecastResponse = await fetch(forecastApiUrl + `cuttack&appId=${currentApiKey}`);
-//     let forecastData = await forecastResponse.json();
-
-//     console.log(forecastData);
-
-//     const fdForecarstWeathers = document.querySelectorAll(".mini5-weather");
-
-//     let idx = 0;
-//     fdForecarstWeathers.forEach((weatherText) => {
-//         let temp = forecastData.list[idx].main.temp;
-
-//         weatherText.innerHTML = forecastData.list[idx].weather[0].main;
-//         weatherText.nextElementSibling.firstElementChild.src = `Images/${forecastData.list[idx].weather[0].main}.png`;
-//         weatherText.nextElementSibling.nextElementSibling.innerHTML = Math.floor(temp)+"°c";
-//         console.log(forecastData.list[idx].weather[0].main);
-//         idx += 8;
-//     })
-// }
-// checkForecastWeather();
