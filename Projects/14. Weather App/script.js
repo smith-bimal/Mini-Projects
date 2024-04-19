@@ -10,6 +10,8 @@ const headMonth = document.querySelector("#main-month");
 const dateFn = new Date();
 const date = dateFn.getDate();
 const month = dateFn.getMonth();
+const dayIdx = dateFn.getDay();
+
 
 const bgVideo = document.querySelector(".card video");
 const mainWeatherLogo = document.querySelector(".hero-sec img");
@@ -98,83 +100,107 @@ searchBtn.addEventListener("click", () => {
         forecastApiUrl += searchCity.value;
 
         async function checkCurrentWeather() {
-            let currentResponse = await fetch(currentApiUrl + `&appId=${currentApiKey}`);
-            let currentData = await currentResponse.json();
-            let weather = currentData.weather[0].main;
+            try {
+                let currentResponse = await fetch(currentApiUrl + `&appId=${currentApiKey}`);
+                let currentData = await currentResponse.json();
+                let weather = currentData.weather[0].main;
 
-            mainWeatherName.innerHTML = weather;
-            mainWeatherLogo.style.opacity = "1";
-            mainTemp.innerHTML = Math.round(currentData.main.temp);
-            mainCity.innerHTML = currentData.name;
-            weatherDesc.innerHTML = currentData.weather[0].description;
-            mainMaxTemp.innerHTML = currentData.main.temp_max + "°c";
-            mainMinTemp.innerHTML = currentData.main.temp_min + "°c";
-            humidity.innerHTML = currentData.main.humidity;
-            windSpeed.innerHTML = currentData.wind.speed;
+                mainWeatherName.innerHTML = weather;
+                mainWeatherLogo.style.opacity = "1";
+                mainTemp.innerHTML = Math.round(currentData.main.temp);
+                mainCity.innerHTML = currentData.name;
+                weatherDesc.innerHTML = currentData.weather[0].description;
+                mainMaxTemp.innerHTML = currentData.main.temp_max + "°c";
+                mainMinTemp.innerHTML = currentData.main.temp_min + "°c";
+                humidity.innerHTML = currentData.main.humidity;
+                windSpeed.innerHTML = currentData.wind.speed;
 
-            function weatherVisual(name) {
-                if (name == "") {
-                    bgVideo.src = `BG-videos/Default.mp4`;
-                    mainWeatherLogo.src = `Images/Clear.png`;
-                } else if (name == "Clouds" || name == "Clear" || name == "Drizzle" || name == "Rain" || name == "Snow" || name == "Thunderstorm") {
-                    bgVideo.src = `BG-videos/${name}.mp4`;
-                    mainWeatherLogo.src = `Images/${name}.png`;
-                } else {
-                    bgVideo.src = `BG-videos/Mist.mp4`;
-                    mainWeatherLogo.src = `Images/Mist.png`;
+                function weatherVisual(name) {
+                    if (name == "") {
+                        bgVideo.src = `BG-videos/Default.mp4`;
+                        mainWeatherLogo.src = `Images/Clear.png`;
+                    } else if (name == "Clouds" || name == "Clear" || name == "Drizzle" || name == "Rain" || name == "Snow" || name == "Thunderstorm") {
+                        bgVideo.src = `BG-videos/${name}.mp4`;
+                        mainWeatherLogo.src = `Images/${name}.png`;
+                    } else {
+                        bgVideo.src = `BG-videos/Mist.mp4`;
+                        mainWeatherLogo.src = `Images/Mist.png`;
+                    }
                 }
+                weatherVisual(weather);
+            } catch (error) {
+                errorPopup();
+                console.log("Invalid City Name");
             }
-            weatherVisual(weather);
+
         }
         checkCurrentWeather();
 
         async function checkForecastWeather() {
-            let forecastResponse = await fetch(forecastApiUrl + `&appId=${currentApiKey}`);
-            let forecastData = await forecastResponse.json();
-            let i = 0;
-            const miniTime = document.querySelectorAll(".mini-hour");
-            const miniTemp = document.querySelectorAll(".mini-hour-temp");
-            const miniWeatherHourLogo = document.querySelectorAll(".mini-tab img")
 
-            miniTime.forEach((el) => {
-                const unixTime = forecastData.list[i].dt;
-                let unixDateCon = new Date(unixTime * 1000);
-                el.innerHTML = unixDateCon.getHours() + ' : ' + unixDateCon.getMinutes();
-                i++;
-            })
+            try {
+                let forecastResponse = await fetch(forecastApiUrl + `&appId=${currentApiKey}`);
+                let forecastData = await forecastResponse.json();
 
-            i = 0;
-            miniTemp.forEach((el) => {
-                const Temp = forecastData.list[i].main.temp;
-                el.innerHTML = Math.floor(Temp) + "°c";
-                i++;
-            })
+                let i = 0;
+                const miniTime = document.querySelectorAll(".mini-hour");
+                const miniTemp = document.querySelectorAll(".mini-hour-temp");
+                const miniWeatherHourLogo = document.querySelectorAll(".mini-tab img")
 
-            i = 0;
-            miniWeatherHourLogo.forEach((el) => {
-                let weatherLogoName = forecastData.list[i].weather[0].main
-                el.style.opacity = "1";
+                miniTime.forEach((el) => {
+                    const unixTime = forecastData.list[i].dt;
+                    let unixDateCon = new Date(unixTime * 1000);
+                    el.innerHTML = unixDateCon.getHours() + ' : ' + unixDateCon.getMinutes();
+                    i++;
+                })
 
-                if (weatherLogoName == "") {
-                    el.src = `Images/Clear.png`;
-                } else if (weatherLogoName == "Clouds" || weatherLogoName == "Clear" || weatherLogoName == "Drizzle" || weatherLogoName == "Rain" || weatherLogoName == "Snow" || weatherLogoName == "Thunderstorm") {
-                    el.src = `Images/${weatherLogoName}.png`;
-                } else {
-                    el.src = `Images/Mist.png`;
-                }
-            })
+                i = 0;
+                miniTemp.forEach((el) => {
+                    const Temp = forecastData.list[i].main.temp;
+                    el.innerHTML = Math.floor(Temp) + "°c";
+                    i++;
+                })
 
-            const fdForecarstWeathers = document.querySelectorAll(".mini5-weather");
-            let idx = 0;
-            fdForecarstWeathers.forEach((weatherText) => {
-                let temp = forecastData.list[idx].main.temp;
+                i = 0;
+                miniWeatherHourLogo.forEach((el) => {
+                    let weatherLogoName = forecastData.list[i].weather[0].main
+                    el.style.opacity = "1";
 
-                weatherText.innerHTML = forecastData.list[idx].weather[0].main;
-                weatherText.nextElementSibling.firstElementChild.src = `Images/${forecastData.list[idx].weather[0].main}.png`;
-                weatherText.nextElementSibling.firstElementChild.style.opacity = "1";
-                weatherText.nextElementSibling.nextElementSibling.innerHTML = Math.floor(temp) + "°c";
-                idx += 8;
-            })
+                    if (weatherLogoName == "") {
+                        el.src = `Images/Clear.png`;
+                    } else if (weatherLogoName == "Clouds" || weatherLogoName == "Clear" || weatherLogoName == "Drizzle" || weatherLogoName == "Rain" || weatherLogoName == "Snow" || weatherLogoName == "Thunderstorm") {
+                        el.src = `Images/${weatherLogoName}.png`;
+                    } else {
+                        el.src = `Images/Mist.png`;
+                    }
+                })
+
+                const fdForecarstWeathers = document.querySelectorAll(".mini5-weather");
+                let idx = 0;
+                fdForecarstWeathers.forEach((weatherText) => {
+                    let temp = forecastData.list[idx].main.temp;
+
+                    weatherText.innerHTML = forecastData.list[idx].weather[0].main;
+                    weatherText.nextElementSibling.firstElementChild.src = `Images/${forecastData.list[idx].weather[0].main}.png`;
+                    weatherText.nextElementSibling.firstElementChild.style.opacity = "1";
+                    weatherText.nextElementSibling.nextElementSibling.innerHTML = Math.floor(temp) + "°c";
+                    idx += 8;
+                })
+
+                const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                const miniDays = document.querySelectorAll(".nextday");
+                let weekIdx;
+
+                miniDays.forEach((el, idx) => {
+                    let weekIdx = (dayIdx + idx + 1) % 7; // Calculate the index of the next day
+                    el.innerHTML = days[weekIdx];
+                })
+            } catch (error) {
+                errorPopup();
+                console.log("Invalid City Name");
+            }
+
+
         }
 
         checkForecastWeather();
@@ -184,3 +210,5 @@ searchBtn.addEventListener("click", () => {
     currentApiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=` + searchCity.value;
     forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=` + searchCity.value;
 })
+
+
