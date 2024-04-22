@@ -100,41 +100,47 @@ searchBtn.addEventListener("click", () => {
         forecastApiUrl += searchCity.value;
 
         async function checkCurrentWeather() {
-            try {
-                let currentResponse = await fetch(currentApiUrl + `&appId=${currentApiKey}`);
-                let currentData = await currentResponse.json();
-                let weather = currentData.weather[0].main;
+            // try {
+            let currentResponse = await fetch(currentApiUrl + `&appId=${currentApiKey}`);
+            let currentData = await currentResponse.json();
+            let weather = currentData.weather[0].main;
 
-                mainWeatherName.innerHTML = weather;
-                mainWeatherLogo.style.opacity = "1";
-                mainTemp.innerHTML = Math.round(currentData.main.temp);
-                mainCity.innerHTML = currentData.name;
-                weatherDesc.innerHTML = currentData.weather[0].description;
-                mainMaxTemp.innerHTML = currentData.main.temp_max + "°c";
-                mainMinTemp.innerHTML = currentData.main.temp_min + "°c";
-                humidity.innerHTML = currentData.main.humidity;
-                windSpeed.innerHTML = currentData.wind.speed;
+            mainWeatherName.innerHTML = weather;
+            mainWeatherLogo.style.opacity = "1";
+            mainTemp.innerHTML = Math.round(currentData.main.temp);
+            mainCity.innerHTML = currentData.name;
+            weatherDesc.innerHTML = currentData.weather[0].description;
+            mainMaxTemp.innerHTML = currentData.main.temp_max + "°c";
+            mainMinTemp.innerHTML = currentData.main.temp_min + "°c";
+            humidity.innerHTML = currentData.main.humidity;
+            windSpeed.innerHTML = currentData.wind.speed;
 
-                function weatherVisual(name) {
-                    if (name == "") {
-                        bgVideo.src = `BG-videos/Default.mp4`;
-                        mainWeatherLogo.src = `Images/Clear.png`;
-                    } else if (name == "Clouds" || name == "Clear" || name == "Drizzle" || name == "Rain" || name == "Snow" || name == "Thunderstorm") {
-                        bgVideo.src = `BG-videos/${name}.mp4`;
-                        mainWeatherLogo.src = `Images/${name}.png`;
-                    } else {
-                        bgVideo.src = `BG-videos/Mist.mp4`;
-                        mainWeatherLogo.src = `Images/Mist.png`;
-                    }
+            function weatherVisual(name) {
+                if (name == "") {
+                    bgVideo.src = `BG-videos/Default.mp4`;
+                    mainWeatherLogo.src = `Images/Clear.png`;
+                } else if (name == "Clouds" || name == "Clear" || name == "Drizzle" || name == "Rain" || name == "Snow" || name == "Thunderstorm") {
+                    bgVideo.src = `BG-videos/${name}.mp4`;
+                    mainWeatherLogo.src = `Images/${name}.png`;
+                } else {
+                    bgVideo.src = `BG-videos/Mist.mp4`;
+                    mainWeatherLogo.src = `Images/Mist.png`;
                 }
-                weatherVisual(weather);
-            } catch (error) {
-                errorPopup();
-                console.log("Invalid City Name");
             }
+            weatherVisual(weather);
+            // } catch (error) {
+            //     errorPopup();
+            //     console.log("Invalid City Name");
+            // }
 
         }
-        checkCurrentWeather();
+
+        // As I am using then() and catch() functions, I have commented out the try() catch() function
+        checkCurrentWeather().then(() => {
+            console.log("city Loaded");
+        }).catch((err) => {
+            console.log("Invalid City Name");
+        });
 
         async function checkForecastWeather() {
 
