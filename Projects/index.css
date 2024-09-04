@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  font-family: "SUSE", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    background-color: #212121;
+}
+
+.container {
+  width: fit-content;
+  padding: 2rem;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.project-link div {
+  filter: drop-shadow(5px 5px 5px 5px #fff);
+  -webkit-filter: drop-shadow(5px 5px 5px 5px #fff);
+}
+
+.project-link div img:hover {
+    transition: 0.2s ease;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+}
+
+.project-link img {
+  width: 250px;
+  height: 150px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+  filter: drop-shadow(2px 4px 6px #fff);
+  margin-bottom: 1rem;
+}
+
+.projects {
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}

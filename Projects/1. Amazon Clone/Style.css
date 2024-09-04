@@ -403,6 +403,8 @@ main {
 .si24 {
   object-fit: fill;
   background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .shopping-list-box-link {
@@ -443,6 +445,8 @@ main {
 .boximg6 {
   background-size: cover;
   background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 /*---------Shopping Suggestion listbar---------*/
